@@ -6,3 +6,5 @@ const ItemList = () => (
   </div>
 
 );
+
+export default ItemList;
