@@ -1,6 +1,10 @@
 {
   "name": "catalogue_of_recipes",
   "version": "0.1.0",
+ "engines": {
+    "node": "14.17.2",
+    "npm": "6.14.13"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
