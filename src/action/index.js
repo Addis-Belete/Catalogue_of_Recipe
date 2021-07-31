@@ -10,7 +10,7 @@ export const fetchRecipeRequests = () => ({
   type: FETCH_USER_REQUEST,
 });
 
-const fetchRecipeSuccess = (recipes) => ({
+export const fetchRecipeSuccess = (recipes) => ({
   type: FETCH_USER_SUCCESS,
 
 });
