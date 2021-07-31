@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Recipe from '../components/Recipe';
 
-const ItemList = ({ recipe }) => (
-  <div>
-    This component is responsible to display all recipe lists
-  </div>
+const ItemList = ({ recipes }) => (
+  <Recipe recipes={recipes} />
 
 );
 const mapStateToProps = (state) => ({
-  recipe: state.recipeReducer.results,
+  recipes: state.recipeReducer.results,
 
 });
 

@@ -1,8 +1,11 @@
 import '../style/App.css';
+import ItemList from '../container/ItemList';
+import SearchBar from '../container/SearchBar';
 
 const App = () => (
   <div className="App">
-    React Capstone Metahulish
+    <SearchBar />
+    <ItemList />
   </div>
 );
 
