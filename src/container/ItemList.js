@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
 import Recipe from '../components/Recipe';
@@ -7,7 +8,7 @@ const ItemList = ({ recipes }) => (
 
 );
 const mapStateToProps = (state) => ({
-  recipes: state.recipeReducer.results,
+  recipes: state.results,
 
 });
 

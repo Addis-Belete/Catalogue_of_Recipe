@@ -6,7 +6,7 @@ const RecipeData = async () => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return await response.blob();
+    return response.json();
   } catch (e) {
     console.log(e);
   }
