@@ -19,7 +19,11 @@ const recipeReducer = (state = initialState, action) => {
 
 const fetchRecipes = async (dispatch, getState) => {
   const response = await axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=2b280d469bf44b1280528a91ec861d2a&number=20');
+  console.log(response);
   dispatch({ type: RECIPES_LOAD, payload: response.results });
+  const stateAfter = getState();
+  console.log(stateAfter);
 };
 const store = createStore(recipeReducer, composedEnhancer);
+console.log(store.getState());
 export { recipeReducer, fetchRecipes, store };
