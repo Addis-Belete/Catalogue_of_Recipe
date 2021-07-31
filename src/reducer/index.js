@@ -1,3 +1,4 @@
+import { createStore } from 'redux';
 import { FILTER_RECIPE } from '../action';
 import RecipeData from '../Api/Recipe-data';
 
@@ -9,5 +10,5 @@ const recipeReducer = (state = initialState, action) => {
   }
   return state;
 };
-
-export default recipeReducer;
+const store = createStore(recipeReducer);
+export default store;
