@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import axios from 'axios';
 
@@ -31,5 +32,15 @@ export const fetchRecipes = () => (dispatch) => {
     .catch((error) => {
       const errorMsg = error.message;
       dispatch(fetchRecipesFailure(errorMsg));
+    });
+};
+
+export const fetchIngredients = (id) => (dispatch) => {
+  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=2b280d469bf44b1280528a91ec861d2a`)
+    .then((response) => {
+      const recipes = response.data;
+    })
+    .catch((error) => {
+      const errorMsg = error.message;
     });
 };
