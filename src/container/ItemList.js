@@ -6,10 +6,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchRecipes } from '../action';
+import { fetchRecipes, filterRecipe } from '../action';
+import store from '../store/store';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
-  console.log(recipes);
+  const handleFilterchange = (e) => {
+    store.dispatch(filterRecipe(e.target.value));
+  };
   useEffect(() => {
     fetchRecipes();
   }, []);
