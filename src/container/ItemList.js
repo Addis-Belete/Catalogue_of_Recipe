@@ -1,39 +1,32 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-
-import { fetchRecipes, filterRecipe } from '../action';
-import store from '../store/store';
 import Recipe from '../components/Recipe';
-import SearchBar from './SearchBar';
+import { fetchRecipes } from '../action';
 
-const ItemList = ({ recipes, filter }) => {
+const ItemList = ({ recipes, fetchRecipes }) => {
   console.log(recipes);
-  const handleFilterchange = (e) => {
-    store.dispatch(filterRecipe(e.target.value));
-  };
-  let filteredRecipes = '';
-  if (filter === '') {
-    filteredRecipes = recipes;
-  } else {
-    filteredRecipes = recipes.recipes.results.filter((recipe) => recipe.title === filter);
-  }
-  console.log(filteredRecipes);
+  const [fil, setFil] = useState('');
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
+
+  const search = (recipes) => recipes.recipes.results.filter((result) => result.title.toLowerCase().indexOf(fil) > -1);
   return (
     <div>
-      <SearchBar handleChange={handleFilterchange} />
-      <Recipe recipes={filteredRecipes} />
-
+      <input type="text" placeholder="Search for recipes" value={fil} onChange={(e) => setFil(e.target.value)} />
+      <Recipe recipes={search(recipes)} />
     </div>
   );
 };
 const mapStateToProps = (state) => ({
   recipes: state.recipe,
-  filter: state.filter,
+
 });
 
 const mapDispatchToProps = (dispatch) => ({
