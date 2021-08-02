@@ -2,7 +2,7 @@ import { FETCH_USER_FAILURE, FETCH_USER_REQUEST, FETCH_USER_SUCCESS } from '../a
 
 const initialState = {
   loading: false,
-  recipes: [],
+  recipes: { results: [] },
   error: '',
 
 };
