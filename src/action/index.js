@@ -5,7 +5,7 @@ import axios from 'axios';
 export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
 export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
 export const FETCH_USER_FAILURE = 'FETCH_USER_FAILURE';
-export const FILTER_RECIPE = 'FILTER_RECIPE';
+
 export const fetchRecipeRequests = () => ({
   type: FETCH_USER_REQUEST,
 });
@@ -32,15 +32,5 @@ export const fetchRecipes = () => (dispatch) => {
     .catch((error) => {
       const errorMsg = error.message;
       dispatch(fetchRecipesFailure(errorMsg));
-    });
-};
-
-export const fetchIngredients = (id) => (dispatch) => {
-  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=2b280d469bf44b1280528a91ec861d2a`)
-    .then((response) => {
-      const recipes = response.data;
-    })
-    .catch((error) => {
-      const errorMsg = error.message;
     });
 };
