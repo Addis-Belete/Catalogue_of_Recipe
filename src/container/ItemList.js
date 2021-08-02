@@ -19,7 +19,7 @@ const ItemList = ({ recipes, fetchRecipes }) => {
   const search = (recipes) => recipes.recipes.results.filter((result) => result.title.toLowerCase().indexOf(fil) > -1);
   return (
     <div>
-      <input type="text" placeholder="Search for recipes" value={fil} onChange={(e) => setFil(e.target.value)} />
+      <input type="text" placeholder="Search for recipes" value={fil} onChange={(e) => setFil((e.target.value).toLowerCase())} />
       <Recipe recipes={search(recipes)} />
     </div>
   );

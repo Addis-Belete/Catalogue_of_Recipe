@@ -20,11 +20,6 @@ export const fetchRecipesFailure = (error) => ({
   payload: error,
 
 });
-export const filterRecipe = (filter) => ({
-  type: FILTER_RECIPE,
-  filter,
-
-});
 
 export const fetchRecipes = () => (dispatch) => {
   dispatch(fetchRecipeRequests);
