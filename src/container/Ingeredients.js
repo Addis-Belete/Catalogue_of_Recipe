@@ -1,10 +1,16 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { connect } from 'redux';
+import { mapDispatchToProps, mapStateToProps } from './ItemList';
 
-const Ingredients = () => (
+const Ingredients = ({ ingredients }) => (
   <div>
-    This component is responsoble to display each recipe ingredients
+    {ingredients.map((ingredient) => (
+      <p key={`${ingredient.name}`}>{ingredient.name}</p>
+
+    ))}
   </div>
 
 );
 
-export default Ingredients;
+export default connect(mapStateToProps, mapDispatchToProps)(Ingredients);

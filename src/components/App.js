@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import '../style/App.css';
-import ItemList from '../container/ItemList';
-import SearchBar from '../container/SearchBar';
+import Ingredients from '../container/Ingeredients';
 
 const App = () => (
 
-  <ItemList />
+  <Ingredients />
 
 );
 
