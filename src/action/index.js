@@ -4,7 +4,7 @@ import axios from 'axios';
 export const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
 export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
 export const FETCH_USER_FAILURE = 'FETCH_USER_FAILURE';
-
+export const FILTER_RECIPE = 'FILTER_RECIPE';
 export const fetchRecipeRequests = () => ({
   type: FETCH_USER_REQUEST,
 });
@@ -18,6 +18,11 @@ export const fetchRecipeSuccess = (recipes) => ({
 export const fetchRecipesFailure = (error) => ({
   type: FETCH_USER_FAILURE,
   payload: error,
+
+});
+export const filterRecipe = (filter) => ({
+  type: FILTER_RECIPE,
+  filter,
 
 });
 
