@@ -4,10 +4,9 @@ import ItemList from '../container/ItemList';
 import SearchBar from '../container/SearchBar';
 
 const App = () => (
-  <div>
-    <SearchBar />
-    <ItemList />
-  </div>
+
+  <ItemList />
+
 );
 
 export default App;

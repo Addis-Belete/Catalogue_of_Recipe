@@ -1,9 +1,14 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 
-const SearchBar = () => (
-  <div>
-    <input type="text" placeholder="Search" />
-    <button type="submit">Search</button>
-  </div>
-);
+import React, { useState } from 'react';
+
+const SearchBar = () => {
+  const [q, setQ] = useState('');
+  return (
+    <div>
+      <input type="text" placeholder="Search" value={q} onChange={(e) => setQ(e.target.value)} />
+
+    </div>
+  );
+};
 export default SearchBar;

@@ -3,45 +3,37 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchRecipes, filterRecipe } from '../action';
 import store from '../store/store';
+import Recipe from '../components/Recipe';
+import SearchBar from './SearchBar';
 
-const ItemList = ({ recipes, fetchRecipes }) => {
+const ItemList = ({ recipes, filter }) => {
+  console.log(recipes);
   const handleFilterchange = (e) => {
     store.dispatch(filterRecipe(e.target.value));
   };
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
-  return recipes.loading ? (
-    <h2>Loading...</h2>
-  ) : recipes.error ? (
-    <h2>{recipes.error}</h2>
-  ) : (
+  let filteredRecipes = '';
+  if (filter === '') {
+    filteredRecipes = recipes;
+  } else {
+    filteredRecipes = recipes.recipes.results.filter((recipe) => recipe.title === filter);
+  }
+  console.log(filteredRecipes);
+  return (
     <div>
-      <h2>Recipes List</h2>
-      <div>
-        {recipes.recipes.results.map((recipe) => (
-          <div key={recipe.title}>
-
-            <p>{recipe.title}</p>
-            <p>{recipe.id}</p>
-            <img src={`${recipe.image}`} alt="recipeImage" />
-          </div>
-        ))}
-
-      </div>
+      <SearchBar handleChange={handleFilterchange} />
+      <Recipe recipes={filteredRecipes} />
 
     </div>
-
   );
 };
 const mapStateToProps = (state) => ({
   recipes: state.recipe,
-
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
