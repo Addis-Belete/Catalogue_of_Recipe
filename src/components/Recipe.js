@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchIngredients } from '../action/ingredient';
+import styles from '../style/style.module.css';
 
 const Recipe = ({ recipes }) => {
   const dispatch = useDispatch();
@@ -12,12 +13,12 @@ const Recipe = ({ recipes }) => {
 
   return (
     <div>
-      <h2>Recipes List</h2>
+
       <div>
         {recipes.map((recipe) => (
           <div key={recipe.title}>
             <Link to={`/${recipe.id}`} onClick={clickHandler(recipe.id)}>
-              <img src={`${recipe.image}`} alt="recipeImage" />
+              <img className={styles.img} src={`${recipe.image}`} alt="recipeImage" />
               <p>{recipe.title}</p>
             </Link>
           </div>

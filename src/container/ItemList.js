@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Recipe from '../components/Recipe';
 import { fetchRecipes } from '../action';
-import { fetchIngredients } from '../action/ingredient';
+import styles from '../style/style.module.css';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
   console.log(recipes);
@@ -20,7 +20,7 @@ const ItemList = ({ recipes, fetchRecipes }) => {
   const search = (recipes) => recipes.recipes.results.filter((result) => result.title.toLowerCase().indexOf(fil) > -1);
   return (
     <div>
-      <input type="text" placeholder="Search for recipes" value={fil} onChange={(e) => setFil((e.target.value).toLowerCase())} />
+      <input className={styles.input} type="text" placeholder="Search for recipes" value={fil} onChange={(e) => setFil((e.target.value).toLowerCase())} />
       <Recipe recipes={search(recipes)} />
     </div>
   );
