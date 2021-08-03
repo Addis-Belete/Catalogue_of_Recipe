@@ -16,15 +16,37 @@ const Ingredients = () => {
   const ingred = ingredients.ingredients.ingredients;
 
   return (
-    <ul>
+    <div
+      className="close-meal-detail"
+      role="button"
+      tabIndex="0"
+      onClick={exitDetailHandler}
+      onKeyDown={exitDetailHandler}
+    >
+      <div>
+        <div>
+          <span
+            className="close-meal-detail"
+            role="button"
+            tabIndex="0"
+            onClick={exitDetailHandler}
+            onKeyDown={exitDetailHandler}
+          >
+            Close
 
-      {ingred.map((ingredient) => (
+          </span>
 
-        <li key={ingredient.name}>{ingredient.name}</li>
+        </div>
+        <ul>
 
-      ))}
-    </ul>
+          {ingred.map((ingredient) => (
 
+            <li key={ingredient.name}>{ingredient.name}</li>
+
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
