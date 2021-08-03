@@ -1,10 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable no-console */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { fetchIngredients } from '../action/ingredient';
 
 const Recipe = ({ recipes }) => {
@@ -33,5 +30,16 @@ const Recipe = ({ recipes }) => {
 
   );
 };
-
+Recipe.propTypes = {
+  recipes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      image: PropTypes.string,
+    }),
+  ),
+};
+Recipe.defaultProps = {
+  recipes: [],
+};
 export default Recipe;
