@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/prefer-default-export */
 import axios from 'axios';
@@ -21,9 +22,9 @@ export const fetchIngredientsFailure = (error) => ({
   payload: error,
 
 });
-export const fetchIngredients = (id) => (dispatch) => {
+export const fetchIngredients = () => (dispatch) => {
   dispatch(fetchIngredientRequests);
-  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=2b280d469bf44b1280528a91ec861d2a`)
+  axios.get('https://api.spoonacular.com/recipes/1003464/ingredientWidget.json?apiKey=2b280d469bf44b1280528a91ec861d2a')
     .then((response) => {
       const ingredients = response.data;
       dispatch(fetchIngredientSuccess(ingredients));

@@ -1,16 +1,33 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-console */
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { connect } from 'redux';
-import { mapDispatchToProps, mapStateToProps } from './ItemList';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchIngredients } from '../action/ingredient';
 
-const Ingredients = ({ ingredients }) => (
-  <div>
-    {ingredients.map((ingredient) => (
-      <p key={`${ingredient.name}`}>{ingredient.name}</p>
+const Ingredients = ({ ingredients, fetchIngredients }) => {
+  useEffect(() => {
+    fetchIngredients();
+  }, []);
+  console.log(ingredients);
+  return (
+    <div>
+      {ingredients.ingredients.map((ingredient) => (
+        <div>
+          <p>{ingredient.name}</p>
+          <img src={ingredient.image} alt="" />
+        </div>
+      ))}
+    </div>
 
-    ))}
-  </div>
+  );
+};
+const mapStateToProps = (state) => ({
+  ingredients: state.ingredient.ingredients,
 
-);
+});
+const mapDispatchToProps = (dispatch) => ({
+  fetchIngredients: () => dispatch(fetchIngredients()),
 
+});
 export default connect(mapStateToProps, mapDispatchToProps)(Ingredients);

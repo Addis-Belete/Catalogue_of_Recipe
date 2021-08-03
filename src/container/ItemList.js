@@ -15,7 +15,6 @@ const ItemList = ({ recipes, fetchRecipes }) => {
   const [fil, setFil] = useState('');
   useEffect(() => {
     fetchRecipes();
-    fetchIngredients();
   }, []);
 
   const search = (recipes) => recipes.recipes.results.filter((result) => result.title.toLowerCase().indexOf(fil) > -1);
@@ -28,12 +27,12 @@ const ItemList = ({ recipes, fetchRecipes }) => {
 };
 export const mapStateToProps = (state) => ({
   recipes: state.recipe,
-  ingredients: state.ingredient,
+
 });
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchRecipes: () => dispatch(fetchRecipes()),
-  fetchIngredients: () => dispatch(fetchIngredients(1003464)),
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemList);

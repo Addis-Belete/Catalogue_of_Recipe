@@ -2,11 +2,7 @@ import { FETCH_INGREDIENT_FAILURE, FETCH_INGREDIENT_REQUEST, FETCH_INGREDIENT_SU
 
 const initialState = {
   loading: false,
-  ingredients: [{
-    name: 'bocola',
-    image: '',
-
-  }],
+  ingredients: { ingredients: [{ name: 'egg white', image: 'egg-white.jpg' }] },
   error: '',
 };
 

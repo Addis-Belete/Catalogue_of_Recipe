@@ -1,11 +1,16 @@
 /* eslint-disable no-unused-vars */
 import '../style/App.css';
-import Ingredients from '../container/Ingeredients';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ItemList from '../container/ItemList';
 
 const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={ItemList} />
 
-  <Ingredients />
-
+    </Switch>
+  </BrowserRouter>
 );
 
 export default App;

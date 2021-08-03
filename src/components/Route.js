@@ -1,11 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ItemList from '../container/ItemList';
 
-const Routes = () => {
+const Routes = () => (
   <BrowserRouter>
-    <Switch />
+    <Switch>
+      <Route exact path="/" component={ItemList} />
 
-  </BrowserRouter>;
-};
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Routes;
