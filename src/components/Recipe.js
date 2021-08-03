@@ -17,10 +17,9 @@ const Recipe = ({ recipes }) => {
         {recipes.map((recipe) => (
           <div key={recipe.title}>
             <Link to={`/${recipe.id}`} onClick={clickHandler(recipe.id)}>
+              <img src={`${recipe.image}`} alt="recipeImage" />
               <p>{recipe.title}</p>
             </Link>
-            <p>{recipe.id}</p>
-            <img src={`${recipe.image}`} alt="recipeImage" />
           </div>
         ))}
 
