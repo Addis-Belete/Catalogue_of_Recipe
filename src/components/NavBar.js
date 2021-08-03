@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from '../style/style.module.css';
 
 const NavBar = () => (
-  <div>Catelogue of Recipe</div>
+  <div className={styles.nav}> Catelogue of Recipe </div>
 );
 
 export default NavBar;
