@@ -7,8 +7,9 @@ import styles from '../style/style.module.css';
 
 const Recipe = ({ recipes }) => {
   const dispatch = useDispatch();
+
   const clickHandler = (id) => {
-    dispatch(fetchIngredients(id));
+    dispatch(fetchIngredients(id), []);
   };
 
   return (

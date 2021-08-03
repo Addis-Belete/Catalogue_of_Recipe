@@ -1,8 +1,4 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
@@ -11,7 +7,6 @@ import { fetchRecipes } from '../action';
 import styles from '../style/style.module.css';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
-  console.log(recipes);
   const [fil, setFil] = useState('');
   useEffect(() => {
     fetchRecipes();
