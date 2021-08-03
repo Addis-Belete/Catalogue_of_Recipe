@@ -51,7 +51,6 @@ grid-gap: 20px;
 }
 
 }
-
 @media screen and (min-width: 1024px) {
 .desktop{
 display: grid;
