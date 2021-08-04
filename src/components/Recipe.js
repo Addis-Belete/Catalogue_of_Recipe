@@ -1,15 +1,15 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { fetchIngredients } from '../action/ingredient';
 import styles from '../style/style.module.css';
 
 const Recipe = ({ recipes }) => {
   const dispatch = useDispatch();
-
   const clickHandler = (id) => {
-    dispatch(fetchIngredients(id), []);
+    dispatch(fetchIngredients(id));
   };
 
   return (
@@ -43,4 +43,5 @@ Recipe.propTypes = {
 Recipe.defaultProps = {
   recipes: [],
 };
+
 export default Recipe;

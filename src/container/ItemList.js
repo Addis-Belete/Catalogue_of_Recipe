@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 import Recipe from '../components/Recipe';
 import { fetchRecipes } from '../action';
 import styles from '../style/style.module.css';
+import { fetchIngredients } from '../action/ingredient';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
   const [fil, setFil] = useState('');
   useEffect(() => {
     fetchRecipes();
+    fetchIngredients();
   }, []);
 
   const search = (recipes) => recipes.recipes.results.filter((result) => result.title
@@ -35,8 +37,9 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   fetchRecipes: () => dispatch(fetchRecipes()),
-
+  fetchIngredient: () => dispatch(fetchIngredients()),
 });
+
 ItemList.propTypes = {
   recipes: PropTypes.object,
   fetchRecipes: PropTypes.func.isRequired,
