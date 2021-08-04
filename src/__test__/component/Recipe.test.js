@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import ItemList from '../../container/ItemList';
+import Recipe from '../../components/Recipe';
 import store from '../../store/store';
 
 afterEach(cleanup);
@@ -11,14 +11,14 @@ it('should render the list of ingredients', () => {
   const { asFragment } = render(
     <Provider store={store}>
       <BrowserRouter>
-        <ItemList />
+        <Recipe />
       </BrowserRouter>
     </Provider>,
   );
   expect(
     asFragment(
       <Provider store={store}>
-        <ItemList />
+        <Recipe />
       </Provider>,
     ),
   ).toMatchSnapshot();
