@@ -8,14 +8,10 @@ import NavBar from './NavBar';
 const App = () => (
   <BrowserRouter>
     <NavBar />
-    <Route path="/" exact>
-      <ItemList>
-        <Switch>
-
-          <Route path="/:recipe_id" component={Ingredients} />
-        </Switch>
-      </ItemList>
-    </Route>
+    <Switch>
+      <Route exact path="/" component={ItemList} />
+      <Route path="/:recipe_id" component={Ingredients} />
+    </Switch>
   </BrowserRouter>
 );
 

@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import './style/index.css';
 import { Provider } from 'react-redux';
 import App from './components/App';
-import { fetchRecipes } from './action/index';
+
 import store from './store/store';
 
-store.dispatch(fetchRecipes);
 ReactDOM.render(
   <Provider store={store}>
     <App />

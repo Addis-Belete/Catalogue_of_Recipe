@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render the catalogue of recipe 1`] = `
+<DocumentFragment>
+  <div
+    class="nav"
+  >
+     Catelogue of Recipe 
+  </div>
+  <div>
+    <input
+      class="input"
+      placeholder="Search for recipes"
+      type="text"
+      value=""
+    />
+    <div>
+      <div
+        class="tablet desktop"
+      >
+        <div>
+          <a
+            href="/2020"
+          >
+            <img
+              alt="recipeImage"
+              class="img"
+              src="undefined"
+            />
+            <p
+              class="p"
+            >
+              hello world
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

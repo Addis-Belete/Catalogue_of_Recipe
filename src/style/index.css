@@ -16,8 +16,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f1f0ee;
   background-image: url('../Assets/food-back.webp');
-  background-repeat: no-repeat;
+  background-repeat:repeat-y;
   background-size: cover;
+
 }
 
 ::placeholder {

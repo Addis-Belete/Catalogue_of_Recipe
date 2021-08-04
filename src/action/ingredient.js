@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-/* eslint-disable import/prefer-default-export */
 import axios from 'axios';
 
 export const FETCH_INGREDIENT_REQUEST = 'FETCH_USER_REQUEST';
@@ -23,9 +21,8 @@ export const fetchIngredientsFailure = (error) => ({
 
 });
 export const fetchIngredients = (id) => (dispatch) => {
-  const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   dispatch(fetchIngredientRequests);
-  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${API_KEY}`)
+  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=a83af3f922524bcd86717ef916c0233c`)
     .then((response) => {
       const ingredients = response.data;
       dispatch(fetchIngredientSuccess(ingredients));

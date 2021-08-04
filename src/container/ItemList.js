@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,9 +12,9 @@ const ItemList = ({ recipes, fetchRecipes }) => {
     fetchRecipes();
   }, []);
 
-  const search = (recipes) => {
-    recipes.recipes.results.filter((result) => result.title.toLowerCase().indexOf(fil) > -1);
-  };
+  const search = (recipes) => recipes.recipes.results.filter((result) => result.title
+    .toLowerCase().indexOf(fil) > -1);
+
   return (
     <div>
       <input
@@ -38,19 +38,12 @@ export const mapDispatchToProps = (dispatch) => ({
 
 });
 ItemList.propTypes = {
-  recipes: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      image: PropTypes.string,
-
-    }),
-  ),
+  recipes: PropTypes.object,
   fetchRecipes: PropTypes.func.isRequired,
 
 };
 ItemList.defaultProps = {
-  recipes: [],
+  recipes: {},
 
 };
 
