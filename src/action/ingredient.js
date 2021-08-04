@@ -22,7 +22,7 @@ export const fetchIngredientsFailure = (error) => ({
 });
 export const fetchIngredients = (id) => (dispatch) => {
   dispatch(fetchIngredientRequests);
-  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=5595044272a94ec2816a3de4a8d1d3da`)
+  axios.get(`https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=f595129b00a64fb5bdc1d28ac6a707a1`)
     .then((response) => {
       const ingredients = response.data;
       dispatch(fetchIngredientSuccess(ingredients));
