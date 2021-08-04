@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the list of ingredients 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      class="input"
+      placeholder="Search for recipes"
+      type="text"
+      value=""
+    />
+    <div>
+      <div
+        class="tablet desktop"
+      >
+        <div>
+          <a
+            href="/2020"
+          >
+            <img
+              alt="recipeImage"
+              class="img"
+              src="undefined"
+            />
+            <p
+              class="p"
+            >
+              hello world
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
