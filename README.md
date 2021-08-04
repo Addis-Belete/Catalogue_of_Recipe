@@ -27,8 +27,10 @@
 
 To set up a local copy of the project
 
-- `git clone git@github.com:Addis0943/calculator.git`
-- `cd calculator`
+- `git clone git@github.com:Addis0943/Catalogue_of_Recipe.git`
+- `cd Catalogue_of_Recipe`
+- `generate Api-key from https://spoonacular.com/food-api/console#Dashboard by creating account`
+- `Change the Api-key inside src folder action/ingredients and action/index`
 - `Run npm start`
 
 To test the code
@@ -56,7 +58,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- Hat tip to `Marc-Antoine Roy on Behance` for his awesome design
 - Inspiration
 - etc
 
