@@ -17,3 +17,20 @@ it('displays Ingredients', () => {
   );
   expect(screen.getByText('Ingredients')).toBeTruthy();
 });
+
+it('should render the list of ingredients', () => {
+  const { asFragment } = render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Ingredients />
+      </BrowserRouter>
+    </Provider>,
+  );
+  expect(
+    asFragment(
+      <Provider store={store}>
+        <Ingredients />
+      </Provider>,
+    ),
+  ).toMatchSnapshot();
+});

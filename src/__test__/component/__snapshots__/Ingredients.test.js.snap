@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the list of ingredients 1`] = `
+<DocumentFragment>
+  <div
+    class="close-ingredients ingredient tablet"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="ingredient-list"
+    >
+      <div>
+        <span
+          class="close-ingredients span"
+          role="button"
+          tabindex="0"
+        >
+          Close
+        </span>
+      </div>
+      <h2
+        class="h2"
+      >
+        Ingredients
+      </h2>
+      <ul
+        class="ul"
+      >
+        <li
+          class="li"
+        >
+          egg white
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
