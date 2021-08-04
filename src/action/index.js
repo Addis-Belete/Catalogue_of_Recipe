@@ -24,7 +24,7 @@ export const fetchRecipesFailure = (error) => ({
 export const fetchRecipes = () => (dispatch) => {
   const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   dispatch(fetchRecipeRequests);
-  axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=a83af3f922524bcd86717ef916c0233c&number=12')
+  axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=5595044272a94ec2816a3de4a8d1d3da&number=12')
     .then((response) => {
       const recipes = response.data;
       dispatch(fetchRecipeSuccess(recipes));
