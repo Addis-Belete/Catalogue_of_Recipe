@@ -32,6 +32,21 @@ exports[`should render the list of ingredients 1`] = `
         >
           egg white
         </li>
+        <li
+          class="li"
+        />
+        <li
+          class="li"
+        />
+        <li
+          class="li"
+        />
+        <li
+          class="li"
+        />
+        <li
+          class="li"
+        />
       </ul>
     </div>
   </div>
