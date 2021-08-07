@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRecipes } from '../action';
@@ -12,8 +11,9 @@ const CategoryFilter = () => {
     dispatch(fetchRecipes(e));
   };
   return (
-    <select name="category" id="cat" onChange={(e) => HandleFilter(e.target.value)}>
+    <select name="category" id="cat" onChange={(e) => HandleFilter(e.target.value)} defaultValue="DEFAULT">
       {category.map((cat) => (
+
         <option value={cat} key={cat}>{cat}</option>
 
       ))}

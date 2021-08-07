@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
@@ -10,7 +9,6 @@ import { fetchIngredients } from '../action/ingredient';
 import CategoryFilter from '../components/Category';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
-  console.log(recipes);
   const [fil, setFil] = useState('');
   useEffect(() => {
     fetchRecipes();

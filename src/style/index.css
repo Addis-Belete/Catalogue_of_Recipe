@@ -43,3 +43,13 @@ margin-top: 4px;
 margin-left: 3px;
 
 }
+@media screen and (min-width:1024px) {
+	#cat{
+height: 60px;
+
+}
+input{
+height: 60px;
+
+}
+}
