@@ -32,8 +32,10 @@ const ItemList = ({ recipes, fetchRecipes }) => {
         />
         <CategoryFilter />
       </div>
+      <div>
 
-      <Recipe recipes={search(recipes)} />
+        <Recipe recipes={search(recipes)} />
+      </div>
     </div>
   );
 };
