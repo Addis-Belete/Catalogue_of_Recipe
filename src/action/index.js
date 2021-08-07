@@ -22,9 +22,8 @@ export const fetchRecipesFailure = (error) => ({
 });
 
 export const fetchRecipes = () => (dispatch) => {
-  const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
   dispatch(fetchRecipeRequests);
-  axios.get('https://api.spoonacular.com/recipes/complexSearch?apiKey=091d7eadd4f54a608319bdf48fd10453&number=12')
+  axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
     .then((response) => {
       const recipes = response.data;
       dispatch(fetchRecipeSuccess(recipes));

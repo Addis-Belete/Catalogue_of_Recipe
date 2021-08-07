@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
@@ -8,13 +9,14 @@ import styles from '../style/style.module.css';
 import { fetchIngredients } from '../action/ingredient';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
+  console.log(recipes);
   const [fil, setFil] = useState('');
   useEffect(() => {
     fetchRecipes();
     fetchIngredients();
   }, []);
 
-  const search = (recipes) => recipes.recipes.results.filter((result) => result.title
+  const search = (recipes) => recipes.recipes.meals.filter((result) => result.strMeal
     .toLowerCase().indexOf(fil) > -1);
 
   return (

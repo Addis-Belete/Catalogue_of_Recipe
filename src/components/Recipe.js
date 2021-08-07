@@ -17,10 +17,10 @@ const Recipe = ({ recipes }) => {
 
       <div className={`${styles.tablet} ${styles.desktop}`}>
         {recipes.map((recipe) => (
-          <div key={recipe.title}>
-            <Link to={`/${recipe.id}`} onClick={clickHandler(recipe.id)}>
-              <img className={styles.img} src={`${recipe.image}`} alt="recipeImage" />
-              <p className={styles.p}>{recipe.title}</p>
+          <div key={recipe.strMeal}>
+            <Link to={`/${recipe.idMeal}`} onClick={clickHandler(recipe.idMeal)}>
+              <img className={styles.img} src={`${recipe.strMealThumb}`} alt="recipeImage" />
+              <p className={styles.p}>{recipe.strMeal}</p>
             </Link>
           </div>
         ))}
