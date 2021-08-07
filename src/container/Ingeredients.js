@@ -37,11 +37,12 @@ const Ingredients = () => {
           </span>
 
         </div>
+
         <h2 className={Styles.h2}>Ingredients</h2>
         <ul className={Styles.ul}>
 
           {ingred.map((ingredient) => (
-            <>
+            <div key={ingredient.strIngredient1}>
               <li key={ingredient.strIngredient1} className={Styles.li}>
                 {ingredient.strIngredient1}
               </li>
@@ -61,12 +62,13 @@ const Ingredients = () => {
                 {ingredient.strIngredient6}
               </li>
 
-            </>
+            </div>
 
           ))}
         </ul>
       </div>
     </div>
+
   );
 };
 
