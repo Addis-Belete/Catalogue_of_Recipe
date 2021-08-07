@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -12,7 +13,8 @@ const Ingredients = () => {
     }
   };
   const ingredients = useSelector((state) => state.ingredient);
-  const ingred = ingredients.ingredients.ingredients;
+  console.log(ingredients);
+  const ingred = ingredients.ingredients.meals;
 
   return (
     <div
@@ -40,8 +42,27 @@ const Ingredients = () => {
         <ul className={Styles.ul}>
 
           {ingred.map((ingredient) => (
+            <>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient1}
+              </li>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient2}
+              </li>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient3}
+              </li>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient4}
+              </li>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient5}
+              </li>
+              <li key={ingredient.strIngredient1} className={Styles.li}>
+                {ingredient.strIngredient6}
+              </li>
 
-            <li key={ingredient.name} className={Styles.li}>{ingredient.name}</li>
+            </>
 
           ))}
         </ul>

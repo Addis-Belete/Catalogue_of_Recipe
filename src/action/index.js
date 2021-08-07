@@ -21,9 +21,9 @@ export const fetchRecipesFailure = (error) => ({
 
 });
 
-export const fetchRecipes = () => (dispatch) => {
+export const fetchRecipes = (cat) => (dispatch) => {
   dispatch(fetchRecipeRequests);
-  axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
+  axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat || 'Seafood'}`)
     .then((response) => {
       const recipes = response.data;
       dispatch(fetchRecipeSuccess(recipes));
