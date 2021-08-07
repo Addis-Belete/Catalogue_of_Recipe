@@ -7,6 +7,7 @@ import Recipe from '../components/Recipe';
 import { fetchRecipes } from '../action';
 import styles from '../style/style.module.css';
 import { fetchIngredients } from '../action/ingredient';
+import CategoryFilter from '../components/Category';
 
 const ItemList = ({ recipes, fetchRecipes }) => {
   console.log(recipes);
@@ -20,14 +21,20 @@ const ItemList = ({ recipes, fetchRecipes }) => {
     .toLowerCase().indexOf(fil) > -1);
 
   return (
+
     <div>
-      <input
-        className={styles.input}
-        type="text"
-        placeholder="Search for recipes"
-        value={fil}
-        onChange={(e) => setFil((e.target.value).toLowerCase())}
-      />
+      <div>
+
+        <input
+          className={styles.input}
+          type="text"
+          placeholder="Search for recipes"
+          value={fil}
+          onChange={(e) => setFil((e.target.value).toLowerCase())}
+        />
+        <CategoryFilter />
+      </div>
+
       <Recipe recipes={search(recipes)} />
     </div>
   );
