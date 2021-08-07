@@ -2,7 +2,7 @@
 
 # Catalogue of Recipes
 
-> A catalogue of recipe web app is an app that displays a recipes and their ingredients by fetching data from `spoonacular.com`. It renders to three screen sizes.
+> A catalog of recipe web app is an app that displays recipes and their ingredients by fetching data from spoonacular.com. It renders to three screen sizes.
 
 ![screenshot](src/Assets/app3.png)
 ![screenshot](src/Assets/app2.png)
