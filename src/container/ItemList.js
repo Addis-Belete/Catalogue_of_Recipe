@@ -23,7 +23,7 @@ const ItemList = ({ recipes, fetchRecipes }) => {
   return (
 
     <div>
-      <div>
+      <div className="category">
 
         <input
           className={styles.input}
