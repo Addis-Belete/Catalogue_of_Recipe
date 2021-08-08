@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the list of ingredients 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="tablet desktop"
+    />
+  </div>
+</DocumentFragment>
+`;
