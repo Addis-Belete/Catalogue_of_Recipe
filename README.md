@@ -2,7 +2,7 @@
 
 # Catalogue of Recipes
 
-> A catalog of recipe web app is an app that displays recipes and their ingredients by fetching data from spoonacular.com. It renders to three screen sizes.
+> A catalogue of recipe web app is an app that displays recipes and their ingredients by fetching data from https://www.themealdb.com/api.php. It renders to three screen sizes.
 
 ![screenshot](src/Assets/app3.png)
 ![screenshot](src/Assets/app2.png)
@@ -29,8 +29,6 @@ To set up a local copy of the project
 
 - `git clone git@github.com:Addis0943/Catalogue_of_Recipe.git`
 - `cd Catalogue_of_Recipe`
-- `generate Api-key from https://spoonacular.com/food-api/console#Dashboard by creating account`
-- `Change the Api-key inside src folder action/ingredients and action/index`
 - `Run npm start`
 
 To test the code
