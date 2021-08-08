@@ -89,24 +89,26 @@ exports[`should render the list of ingredients 1`] = `
       </select>
     </div>
     <div>
-      <div
-        class="tablet desktop"
-      >
-        <div>
-          <a
-            href="/2020"
-          >
-            <img
-              alt="recipeImage"
-              class="img"
-              src="undefined"
-            />
-            <p
-              class="p"
+      <div>
+        <div
+          class="tablet desktop"
+        >
+          <div>
+            <a
+              href="/2020"
             >
-              hello world
-            </p>
-          </a>
+              <img
+                alt="recipeImage"
+                class="img"
+                src="undefined"
+              />
+              <p
+                class="p"
+              >
+                hello world
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
