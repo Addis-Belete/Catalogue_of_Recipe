@@ -29,6 +29,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:Addis0943/Catalogue_of_Recipe.git`
 - `cd Catalogue_of_Recipe`
+- `Run npm install`
 - `Run npm start`
 
 To test the code
