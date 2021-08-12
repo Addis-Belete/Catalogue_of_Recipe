@@ -21,7 +21,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://catalogue-of-recipes.herokuapp.com/)
+[Live Demo Link](https://optimistic-liskov-1d8bb0.netlify.app/)
 
 ## Getting Started
 
