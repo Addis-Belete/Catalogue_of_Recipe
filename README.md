@@ -15,7 +15,7 @@
 - React-Create-App
 - Hook
 - npm
-- CSS
+- CSS3
 - CSS module
 - ES6
 
